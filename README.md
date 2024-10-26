@@ -35,6 +35,7 @@ __3.How many unique countries are represented in the Netflix dataset?__
    SELECT COUNT(DISTINCT country) AS unique_countries
    FROM netflix;
 ```
+### INTERMEDIATE
 
 __4. What are the top 5 most common release years for shows and movies on Netflix?__
 ```sql
@@ -60,6 +61,7 @@ SELECT type, AVG(release_year) AS average_release_year
 FROM netflix
 GROUP BY type;
 ```
+### HARD
 
 __7.What are the most common genre combinations on Netflix?__
 ```sql
