@@ -10,13 +10,20 @@ The dataset used in this project comprises various attributes of shows available
 
 ## Key Questions and SQL Queries:
 Below are the key questions addressed in the project along with their corresponding SQL queries:
-**EASY**
+### EASY
 
 1.**What is the count of each show type (Movie, TV Show)?**
 ```sql
    SELECT type, COUNT(*) AS count
-FROM netflix
-GROUP BY type;
+   FROM netflix
+   GROUP BY type;
+```sql
+2. **What are the top 5 most common ratings on Netflix?**
+   SELECT rating, COUNT(*) AS count
+   FROM netflix
+   GROUP BY rating
+   ORDER BY count DESC
+   LIMIT 5;
 
 
 3. Top Ratings: Identifying the most common ratings for shows and movies.
