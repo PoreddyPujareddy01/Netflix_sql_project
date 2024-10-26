@@ -17,6 +17,7 @@ Below are the key questions addressed in the project along with their correspond
    SELECT type, COUNT(*) AS count
    FROM netflix
    GROUP BY type;
+```sql
 
 2.**What are the top 5 most common ratings on Netflix?**
 
