@@ -2,12 +2,12 @@
 
 ![image](https://github.com/user-attachments/assets/3f907cf9-aef1-4d62-979f-6c7cd504ff34)
 
-#Project Overview: Netflix Data Analysis
+# Project Overview: Netflix Data Analysis
 
-Objective:
+# Objective:
 The objective of this project is to analyze Netflix's extensive dataset to uncover insights related to show types, ratings, release years, directors, genres, and more. This analysis aims to provide valuable information that can help understand viewing trends and preferences among Netflix users.
 
-Data Source:
+# Data Source:
 The dataset used in this project comprises various attributes of shows available on Netflix, including titles, types (movie or TV show), ratings, release years, directors, countries, and genres.
 
 Key Questions Addressed:
