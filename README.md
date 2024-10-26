@@ -12,76 +12,85 @@ The dataset used in this project comprises various attributes of shows available
 Below are the key questions addressed in the project along with their corresponding SQL queries:
 ### EASY
 
-1.**What is the count of each show type (Movie, TV Show)?**
+__1.What is the count of each show type (Movie, TV Show)?__
 ```sql
    SELECT type, COUNT(*) AS count
    FROM netflix
    GROUP BY type;
+```
+
+__2.What are the top 5 most common ratings on Netflix?__
 ```sql
-
-2.**What are the top 5 most common ratings on Netflix?**
-
    SELECT rating, COUNT(*) AS count
    FROM netflix
    GROUP BY rating
    ORDER BY count DESC
    LIMIT 5;
+```
 
-3. **How many unique countries are represented in the Netflix dataset?**
-
+__3.How many unique countries are represented in the Netflix dataset?__
+```sql
    SELECT COUNT(DISTINCT country) AS unique_countries
    FROM netflix;
+```
 
-4. What are the top 5 most common release years for shows and movies on Netflix?
+__4. What are the top 5 most common release years for shows and movies on Netflix?__
+```sql
 SELECT release_year, COUNT(*) AS show_count
 FROM netflix
 GROUP BY release_year
 ORDER BY show_count DESC
 LIMIT 5;
+```
 
-5.Who are the top 5 directors with the most titles?
-
+__5.Who are the top 5 directors with the most titles?__
+```sql
 SELECT director, COUNT(*) AS title_count
 FROM netflix
 GROUP BY director
 ORDER BY title_count DESC
 LIMIT 5;
+```
 
-6.What is the average release year by show type?
-
+__6.What is the average release year by show type?__
+```sql
 SELECT type, AVG(release_year) AS average_release_year
 FROM netflix
 GROUP BY type;
+```
 
-7.What are the most common genre combinations on Netflix?
-
+__7.What are the most common genre combinations on Netflix?__
+```sql
 SELECT listed_in, COUNT(*) AS count
 FROM netflix
 GROUP BY listed_in
 ORDER BY count DESC
 LIMIT 5;
+```
 
-8.How many shows are there per duration category (e.g., Movies by Minutes, TV Shows by Seasons)?
-
+__8.How many shows are there per duration category (e.g., Movies by Minutes, TV Shows by Seasons)?__
+```sql
 SELECT type, duration, COUNT(*) AS count
 FROM netflix
 GROUP BY type, duration
 ORDER BY count DESC;
+```
 
-9.Which shows were released in the latest year?
-
+__9.Which shows were released in the latest year?__
+```sql
 SELECT title, release_year
 FROM netflix
 WHERE release_year = (SELECT MAX(release_year) FROM netflix);
+```
 
-10.What are the top 5 countries with the most titles on Netflix?
-
+__10.What are the top 5 countries with the most titles on Netflix?__
+```sql
 SELECT country, COUNT(*) AS title_count
 FROM netflix
 GROUP BY country
 ORDER BY title_count DESC
 LIMIT 5;
-```sql
+```
 
 ## Methodology:
 The analysis employs SQL queries to extract and manipulate the data, allowing for the calculation of various metrics and insights. The results are presented in a structured format, highlighting significant trends and observations.
